@@ -67,3 +67,8 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Resultados gerados pelo programa
+/genetico
+/convergencia.csv
+/convergencia.svg

@@ -1,9 +1,20 @@
 #include "genetico.h"
 #include <bits/stdc++.h>
+#define endl '\n'
 
 using namespace std;
 
-int main () {
-    exemplo();
+int main() {
+    vector<double> melhores_fitnesses;
+    Individuo melhor = executar_algoritmo(melhores_fitnesses);
+
+    cout << "MELHOR DIETA ENCONTRADA" << endl;
+    imprimir_dieta(melhor);
+
+    if (!salvar_convergencia(melhores_fitnesses)) {
+        cerr << "Nao foi possivel salvar os arquivos de convergencia.\n";
+        return 1;
+    }
+    cout << "\nGrafico: convergencia.svg\nDados: convergencia.csv\n";
     return 0;
 }
