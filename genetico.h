@@ -11,7 +11,10 @@ const double TAXA_MUTACAO = 0.1;
 
 struct Alimento {
     string nome;
-    double proteina, carboidrato, gordura, calorias;
+    double proteina;
+    double carboidrato;
+    double gordura;
+    double calorias;
 };
 
 struct Porcao {
@@ -20,7 +23,6 @@ struct Porcao {
 };
 
 struct Individuo {
-
     vector<Porcao> refeicoes[4];
 };
 
@@ -38,6 +40,5 @@ Individuo cruzar_individuos(const Individuo& pai1, const Individuo& pai2);
 Individuo torneio(const vector<Individuo>& populacao);
 Individuo executar_algoritmo(vector<double>& melhores_fitnesses);
 void imprimir_dieta(const Individuo& individuo);
-bool salvar_convergencia(const vector<double>& melhores_fitnesses);
 
 #endif

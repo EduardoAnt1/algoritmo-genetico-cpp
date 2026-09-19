@@ -11,10 +11,5 @@ int main() {
     cout << "MELHOR DIETA ENCONTRADA" << endl;
     imprimir_dieta(melhor);
 
-    if (!salvar_convergencia(melhores_fitnesses)) {
-        cerr << "Nao foi possivel salvar os arquivos de convergencia.\n";
-        return 1;
-    }
-    cout << "\nGrafico: convergencia.svg\nDados: convergencia.csv\n";
     return 0;
 }
