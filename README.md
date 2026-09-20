@@ -1,5 +1,18 @@
 # algoritmo-genetico-cpp
 
+Algoritmo genético em C++ que gera um **cardápio semanal** (Segunda a Domingo, com café da manhã, almoço, café da tarde e janta), respeitando restrições alimentares (glúten e lactose) e sem repetir a mesma refeição durante a semana.
+
+## Como executar
+
+```
+g++ -O2 -std=c++14 -o genetico main.cpp genetico.cpp
+./genetico
+```
+
+O programa pergunta `Sem gluten? (s/n)` e `Sem lactose? (s/n)` e imprime o cardápio da semana com as quantidades de cada refeição, os totais nutricionais do dia, o número de refeições repetidas (esperado: 0) e o fitness.
+
+## Perguntas de paralelismo
+
 **1. Quais são as principais etapas do algoritmo?**
 - Criação dos indivíduos
 - Torneio
