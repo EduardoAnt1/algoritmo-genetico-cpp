@@ -5,8 +5,8 @@ Algoritmo genético em C++ que gera um **cardápio semanal** (Segunda a Domingo,
 ## Como executar
 
 ```
-g++ -O2 -std=c++14 -o genetico main.cpp genetico.cpp
-./genetico
+g++ main.cpp genetico.cpp
+./a.out (ou ./a.exe)
 ```
 
 O programa pergunta `Sem gluten? (s/n)` e `Sem lactose? (s/n)` e imprime o cardápio da semana com as quantidades de cada refeição, os totais nutricionais do dia, o número de refeições repetidas (esperado: 0) e o fitness.
