@@ -316,7 +316,6 @@ double avaliar_dia(const Dia& dia) {
         }
     }
 
-    // max(1.0, ...) evita que cereais sem gordura (ex.: tapioca) zerem o fitness
     for(int i = 0; i < 4; i += 2) {
         const Porcao& cereal = dia.refeicoes[i][0];
         fitness *= max(1.0, 20 * cereal.quantidade * CAFE_CEREAIS[cereal.alimento].gordura);
@@ -344,8 +343,6 @@ double avaliar_dia(const Dia& dia) {
     return fitness;
 }
 
-// Alimentos na mesma tabela (almoco/janta: slots 0-1 e 2-3) sao ordenados para que
-// "Arroz + Feijao" e "Feijao + Arroz" contem como a mesma refeicao. Tabelas tem < 100 itens.
 long long chave_refeicao(const vector<Porcao>& refeicao) {
     int alimentos[6];
     int n = refeicao.size();
@@ -368,7 +365,6 @@ long long chave_refeicao(const vector<Porcao>& refeicao) {
     return chave;
 }
 
-// Grupos comparados: cafes (manha + tarde juntos) em [0], almoco em [1], janta em [3].
 int contar_repeticoes(const Individuo& individuo) {
     long long chaves[NUM_REFEICOES][2 * DIAS_SEMANA];
     int quantidade[NUM_REFEICOES] = {0, 0, 0, 0};
